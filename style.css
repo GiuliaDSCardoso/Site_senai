@@ -1,0 +1,245 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  
+
+body{
+    background-color: #F2F2F2;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: -0.7rem;
+    gap: auto;
+    position: fixed;
+    top: 0;
+    background-color: #F2F2F2;
+    width:1480px;
+    margin-left: -0.4%;
+    z-index: 1;
+}
+
+.NavDireito{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: left;
+}
+
+.NavDireito .LinksNav{
+    display: flex;
+    gap: 2rem;
+}
+.NavDireito img{
+    margin-left: -10%;
+}
+.NavDireito .LinksNav a{
+    font-family: 'Noto Sans';
+    text-decoration: none;
+    font-weight: 400;
+    font-size:small;
+    color: black;
+    opacity: 0.7;
+}
+
+.NavDireito .LinksNav a:hover{
+    color: rgba(70, 70, 70, 0.808);
+}
+
+/* Nav esquerdo*/
+
+.NavEsquerdo{
+    display: flex;
+    width:5rem;
+    padding: 0.2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-left: 20%;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.NavEsquerdo a{
+    font-family: 'Noto Sans';
+    text-decoration: none;
+    font-weight: 400;
+    font-size:small;
+    color: white;
+
+}
+
+.NavEsquerdo  a:hover{
+    color: rgba(255, 255, 255, 0.808);
+}
+
+/* Banner container*/
+
+.BannerContainer{
+    display: flex;
+    width: 100%;
+}
+
+.BannerContainer .b1 img, .b2 img, .b3 img, .b4 img{
+    width: 101%;
+    height: 800px;
+    max-width: 1440px;
+    transition: all 0.3s ease; 
+    object-fit: cover;
+    
+}
+.BannerContainer .b1 img:hover, .b2 img:hover, .b3 img:hover, .b4 img:hover{
+    z-index: -99999;
+    filter: brightness(50%);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.171);
+}
+
+/* Sobre Container*/
+.SobreContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    width: 100%;
+    height: 880px;
+    gap: 15%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 10%;
+      opacity: 0;
+      transition: all 0.5s ease; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  @keyframes slidein2 {
+    from {
+      margin-right: 10%;
+      opacity: 0;
+      transition: all 0.5s ease; 
+    }
+  
+    to {
+      margin-right: 0%;
+      width: 100%;
+    }
+  }
+.SobreContainer .InfoCard1{
+    display: flex;
+    justify-content: space-evenly;
+    height: 60%;
+    align-items: center;
+    width: 100%;
+    animation: slidein 1s;
+}
+
+.SobreContainer .InfoCard1 img, .InfoCard2 img{
+    width: 35%;
+    image-rendering: optimizeQuality;
+    height: 100%;
+    object-fit: cover;
+}
+.SobreContainer .InfoCard1 .TextoInfo, .InfoCard2 .TextoInfo{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 40%;;
+    text-align: justify;
+    gap: 40px;
+
+
+}
+.SobreContainer .InfoCard2{
+    display: flex;
+    justify-content: space-evenly;
+    height: 60%;
+    align-items: center;
+    width: 100%;
+    animation: slidein2 1s;
+}
+
+.SobreContainer .InfoCard1 button, .InfoCard2 button{
+    width: 25%;
+    padding: 4px 2px;
+    background-color: black;
+    border: none;
+}
+
+.SobreContainer .InfoCard1 button a, .InfoCard2 button a{
+    text-decoration: none;
+    color: white;
+}
+
+.SobreContainer .InfoCard1 button a:hover, .InfoCard2 button a:hover{
+    text-decoration: none;
+    color: rgb(161, 161, 161);
+}
+
+/*Container Redes*/
+.RedesContainer{
+    display: flex;
+    background-color: #0B1935;
+    justify-content: space-around;
+    padding: 0 20%;
+    height: 260px;
+    align-items: center;
+}
+
+.RedesContainer .Rede{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.RedesContainer .Rede h1{
+    color: white;
+    font-size: large;
+}
+
+.RedesContainer .Rede p{
+    color: white;
+}
+
+/* carrossel*/
+.CarrosselImagem{
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.CarrosselImagem .Carrossel{
+    display: flex;
+    gap: 0;
+    width: max-content;
+    animation: scrollCarrossel 20s linear infinite;
+    
+}
+.CarrosselImagem img{
+    width: 380px;
+    height: 400px;
+    object-fit: cover;
+}
+@keyframes scrollCarrossel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
